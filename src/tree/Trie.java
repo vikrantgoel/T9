@@ -28,7 +28,7 @@ public class Trie {
 		return true;
 	}
 	public void add(String w){
-		w = w.toString().toUpperCase().trim();
+		w = w.toUpperCase().trim();
 		int l = w.length();
 		char[] word = w.toCharArray();
 		TrieNode currNode = root;
@@ -63,7 +63,6 @@ public class Trie {
 				return null;
 			currNode = currNode.links[word[i]-65];
 		}
-//		if(currNode==null || (currNode!=null && !currNode.fullWord))
 		if(currNode==null)
 			return null;
 		return currNode;
